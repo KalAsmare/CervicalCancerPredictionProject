@@ -6,7 +6,7 @@ import numpy as np
 
 app = Flask(__name__, template_folder='./templates', static_folder='./static')
 
-Pkl_Filename = "model5.pkl"
+Pkl_Filename = "model.pkl"
 with open(Pkl_Filename, 'rb') as f:
     model = pickle.load(f)
 @app.route('/')
@@ -32,4 +32,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
